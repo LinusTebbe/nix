@@ -1,6 +1,11 @@
-{ config, lib, pkgs, ... }: {
-   services.goxlr-utility = {
-      enable = true;
-      autoStart.xdg = true;
-   };
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
+  services.goxlr-utility = {
+    enable = true;
+    autoStart.xdg = true;
+  };
 }

@@ -1,5 +1,10 @@
-{ config, lib, pkgs, ... }: {
-   environment.systemPackages = with pkgs; [
-      teamspeak3   
-   ];
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
+  environment.systemPackages = with pkgs; [
+    teamspeak3
+  ];
 }

@@ -1,5 +1,5 @@
-{ pkgs, ... }: {
-   environment.systemPackages = [
-      pkgs.alejandra  
-   ];
+{pkgs, ...}: {
+  environment.systemPackages = [
+    pkgs.alejandra
+  ];
 }
