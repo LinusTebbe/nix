@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   environment.systemPackages = [
-    pkgs.python3
+    pkgs.python3Full.withPackages
+    (ps: with ps; [pip])
   ];
 }
