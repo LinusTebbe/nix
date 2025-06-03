@@ -28,7 +28,6 @@
       "services/org.kde.spectacle.desktop"."_launch" = "Meta+Shift+S";
     };
     panels = [
-      # Windows-like panel at the bottom
       {
         location = "bottom";
         screen = "all";
@@ -47,6 +46,7 @@
               launchers = [
                 "applications:org.kde.dolphin.desktop"
                 "applications:org.kde.konsole.desktop"
+                "applications:google-chrome.desktop"
               ];
             };
           }
@@ -89,6 +89,16 @@
     };
     session = {
       sessionRestore.restoreOpenApplicationsOnLogin = "startWithEmptySession";
+    };
+    startup.startupScript = {
+      "start_discord" = {
+        text = "discord --start-minimized";
+        runAlways = true;
+      };
+      "start_spotify" = {
+        text = "spotify & xdotool search --sync --onlyvisible --class \"spotify\" windowminimize";
+        runAlways = true;
+      };
     };
   };
 }
