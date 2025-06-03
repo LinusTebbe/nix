@@ -3,9 +3,10 @@
   lib,
   config,
   pkgs,
+  home-manager,
   ...
 }: let
-  ignoredFiles = lib.fileset.unions [./default.nix];
+  ignoredFiles = lib.fileset.unions [./default.nix ./home.nix];
 in {
   imports =
     lib.fileset.toList (lib.fileset.difference ./. ignoredFiles)
@@ -13,6 +14,14 @@ in {
       inputs.hardware.nixosModules.common-cpu-amd
       inputs.hardware.nixosModules.common-gpu-nvidia-nonprime
       inputs.hardware.nixosModules.common-pc-ssd
+      inputs.home-manager.nixosModules.home-manager
+      {
+        home-manager.useGlobalPkgs = true;
+        home-manager.useUserPackages = false;
+        home-manager.sharedModules = [inputs.plasma-manager.homeManagerModules.plasma-manager];
+
+        home-manager.users.linus = ./home.nix;
+      }
     ];
 
   boot.initrd.availableKernelModules = ["nvme" "xhci_pci" "ahci" "usb_storage" "usbhid" "sd_mod"];
