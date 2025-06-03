@@ -1,6 +1,8 @@
 {
   home.stateVersion = "25.05";
 
+  xsession.numlock.enable = true;
+
   programs = {
     git = {
       userEmail = "linus@tebbe.dev";
