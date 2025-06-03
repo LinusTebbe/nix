@@ -10,6 +10,7 @@
     };
     plasma = {
       enable = true;
+      overrideConfig = true;
       configFile = {
         "kxkbrc"."Layout"."LayoutList" = "eu";
         "kxkbrc"."Layout"."Use" = true;
@@ -38,6 +39,7 @@
         {
           location = "bottom";
           screen = "all";
+          height = 50;
           widgets = [
             {
               name = "org.kde.plasma.kickoff";
