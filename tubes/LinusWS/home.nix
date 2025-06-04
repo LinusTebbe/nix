@@ -39,7 +39,6 @@
         {
           location = "bottom";
           screen = "all";
-          height = 50;
           widgets = [
             {
               name = "org.kde.plasma.kickoff";
