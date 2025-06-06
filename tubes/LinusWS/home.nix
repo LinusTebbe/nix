@@ -14,7 +14,7 @@
       configFile = {
         "kxkbrc"."Layout"."LayoutList" = "eu";
         "kxkbrc"."Layout"."Use" = true;
-"kcminputrc"."Libinput/13364/53296/Keychron  Keychron Link "."PointerAcceleration" = 0.000;
+        "kcminputrc"."Libinput/13364/53296/Keychron  Keychron Link "."PointerAcceleration" = 0.000;
         "kcminputrc"."Libinput/13364/53296/Keychron  Keychron Link "."PointerAccelerationProfile" = 1;
       };
       dataFile = {
@@ -103,7 +103,7 @@
       };
       startup.startupScript = {
         "start_discord" = {
-          text = "discord --start-minimized";
+          text = "discord --start-minimized </dev/null &>/dev/null &";
           runAlways = true;
         };
         "start_spotify" = {
