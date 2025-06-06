@@ -9,6 +9,7 @@
       root.hashedPassword = "!";
       linus = {
         uid = 1000;
+        description = "Linus";
         isNormalUser = true;
         hashedPasswordFile = config.age.secrets.user-linus.path;
         openssh.authorizedKeys.keys = let
