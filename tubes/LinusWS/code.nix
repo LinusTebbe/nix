@@ -1,10 +1,5 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}: {
-  environment.systemPackages = with pkgs; [
-    vscode
+{pkgs, ...}: {
+  environment.systemPackages = [
+    pkgs.vscode
   ];
 }

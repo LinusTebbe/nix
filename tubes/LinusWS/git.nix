@@ -1,10 +1,5 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}: {
-  environment.systemPackages = with pkgs; [
-    git
+{pkgs, ...}: {
+  environment.systemPackages = [
+    pkgs.git
   ];
 }

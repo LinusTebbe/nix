@@ -1,10 +1,5 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}: {
-  environment.systemPackages = with pkgs; [
-    google-chrome
+{pkgs, ...}: {
+  environment.systemPackages = [
+    pkgs.google-chrome
   ];
 }

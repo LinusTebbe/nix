@@ -1,10 +1,5 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}: {
-  environment.systemPackages = with pkgs; [
-    discord
+{pkgs, ...}: {
+  environment.systemPackages = [
+    pkgs.discord
   ];
 }

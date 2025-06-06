@@ -1,10 +1,5 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}: {
-  environment.systemPackages = with pkgs; [
-    xorg.xbacklight
+{pkgs, ...}: {
+  environment.systemPackages = [
+    pkgs.xorg.xbacklight
   ];
 }

@@ -33,5 +33,6 @@ in {
   system.stateVersion = "25.05";
 
   powerManagement.cpuFreqGovernor = "performance";
+  virtualisation.docker.enable = true;
   virtualisation.oci-containers.backend = "docker";
 }
