@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   networking.networkmanager.enable = true;
   services.xserver.enable = true;
   services.displayManager.sddm.enable = true;
@@ -7,6 +7,9 @@
     layout = "us";
     variant = "";
   };
+  environment.systemPackages = [
+    pkgs.kdePackages.kcalc
+  ];
   services.printing.enable = true;
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
