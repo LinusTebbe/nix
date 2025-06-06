@@ -14,6 +14,8 @@
       configFile = {
         "kxkbrc"."Layout"."LayoutList" = "eu";
         "kxkbrc"."Layout"."Use" = true;
+"kcminputrc"."Libinput/13364/53296/Keychron  Keychron Link "."PointerAcceleration" = 0.000;
+        "kcminputrc"."Libinput/13364/53296/Keychron  Keychron Link "."PointerAccelerationProfile" = 1;
       };
       dataFile = {
       };
@@ -38,6 +40,7 @@
       panels = [
         {
           location = "bottom";
+          height = 44;
           screen = "all";
           widgets = [
             {
