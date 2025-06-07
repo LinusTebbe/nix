@@ -1,7 +1,7 @@
 {pkgs, ...}: {
-  environment.systemPackages = with pkgs; [
-    jetbrains.rust-rover
-    jetbrains.phpstorm
-    jetbrains.idea-community
+  environment.systemPackages = with pkgs.jetbrains; [
+    rust-rover
+    phpstorm
+    idea-community
   ];
 }
