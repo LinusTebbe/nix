@@ -110,6 +110,10 @@
           text = "spotify & xdotool search --sync --onlyvisible --class \"spotify\" windowminimize";
           runAlways = true;
         };
+        "start_telegram" = {
+          text = "telegram-desktop -startintray </dev/null &>/dev/null &";
+          runAlways = true;
+        };
       };
     };
   };
