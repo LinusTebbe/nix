@@ -7,8 +7,9 @@
     layout = "us";
     variant = "";
   };
-  environment.systemPackages = [
-    pkgs.kdePackages.kcalc
+  environment.systemPackages = with pkgs.kdePackages; [
+    kcalc
+    plasma-browser-integration
   ];
   services.printing.enable = true;
   services.pulseaudio.enable = false;
