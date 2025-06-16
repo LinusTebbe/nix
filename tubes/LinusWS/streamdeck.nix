@@ -1,6 +1,6 @@
-{
-  programs.streamdeck-ui = {
-    enable = true;
-    autoStart = true;
-  };
+{pkgs, ...}: {
+  environment.systemPackages = [
+    pkgs.streamcontroller
+    pkgs.gnomeExtensions.streamcontroller-integration
+  ];
 }
