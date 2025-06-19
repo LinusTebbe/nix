@@ -1,5 +1,3 @@
 {pkgs, ...}: {
-  environment.systemPackages = [
-    pkgs.noisetorch
-  ];
+  programs.noisetorch.enable = true;
 }
